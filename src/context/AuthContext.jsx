@@ -63,8 +63,16 @@ export function AuthProvider({ children }) {
     toast.info("Déconnexion effectuée.");
   };
 
+  // Fonction pour mettre à jour les informations utilisateur
+  const updateUserInfo = (updatedUser) => {
+    setUser(prevUser => ({
+      ...prevUser,
+      ...updatedUser
+    }));
+  };
+
   return (
-    <AuthContext.Provider value={{ user, login, logout, isAuthenticated: !!user }}>
+    <AuthContext.Provider value={{ user, login, logout, updateUserInfo, isAuthenticated: !!user }}>
       {children}
     </AuthContext.Provider>
   );

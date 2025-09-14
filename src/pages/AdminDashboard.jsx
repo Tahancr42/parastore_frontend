@@ -252,7 +252,7 @@ const AdminDashboard = () => {
               </span>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600">Utilisateurs</span>
+              <span className="text-sm text-gray-600">Clients</span>
               <span className="text-sm font-medium text-gray-900">
                 {users.filter(u => u.role === 'CLIENT').length}
               </span>
@@ -399,7 +399,7 @@ const AdminDashboard = () => {
                           onChange={(e) => updateUserRole(user.id, e.target.value)}
                           className="text-sm border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         >
-                          <option value="CLIENT">Utilisateur</option>
+                          <option value="CLIENT">Client</option>
                           <option value="GESTIONNAIRE">Gestionnaire</option>
                         </select>
                         <button

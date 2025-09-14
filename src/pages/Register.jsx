@@ -17,6 +17,7 @@ export default function Register() {
   const [form, setForm] = useState({
     nom: '',
     email: '',
+    phone: '',
     password: '',
     confirmPassword: ''
   });
@@ -36,6 +37,7 @@ export default function Register() {
     const response = await axios.post('/api/auth/register', {
       nom: form.nom,
       email: form.email,
+      phone: form.phone,
       password: form.password,
       role:"ROLE_CLIENT"
     });
@@ -67,6 +69,15 @@ export default function Register() {
             name="email"
             placeholder="Adresse e-mail"
             value={form.email}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            required
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Numéro de téléphone"
+            value={form.phone}
             onChange={handleChange}
             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
             required

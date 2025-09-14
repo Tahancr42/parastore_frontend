@@ -11,7 +11,7 @@ export default function About() {
             À propos de <span className="text-emerald-600">Parastore</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Votre parapharmacie en ligne de confiance, au service de votre santé et de votre bien-être depuis 2020.
+            Votre parapharmacie en ligne de confiance, au service de votre santé et de votre bien-être depuis 2025.
           </p>
         </div>
       </section>

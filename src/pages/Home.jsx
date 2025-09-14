@@ -279,7 +279,7 @@ export default function Home() {
               },
               {
                 q: "Comment puis-je payer ?",
-                a: "Par carte bancaire, PayPal ou paiement à la livraison.",
+                a: "Paiement à la livraison.",
               },
               {
                 q: "Puis-je retourner un produit ?",

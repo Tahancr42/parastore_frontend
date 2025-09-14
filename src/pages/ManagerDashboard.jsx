@@ -901,6 +901,9 @@ const ManagerDashboard = () => {
                           Utilisateur
                         </th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Téléphone
+                        </th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                           Montant
                         </th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -917,7 +920,7 @@ const ManagerDashboard = () => {
                     <tbody className="bg-white divide-y divide-gray-200">
                       {orders.length === 0 ? (
                         <tr>
-                          <td colSpan="6" className="px-6 py-8 text-center text-gray-500">
+                          <td colSpan="7" className="px-6 py-8 text-center text-gray-500">
                             Aucune commande trouvée
                           </td>
                         </tr>
@@ -928,7 +931,13 @@ const ManagerDashboard = () => {
                               #{order.id}
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                              {order.userEmail || 'N/A'}
+                              <div>
+                                <div className="font-medium">{order.userName || 'N/A'}</div>
+                                <div className="text-gray-500 text-xs">{order.userEmail || 'N/A'}</div>
+                              </div>
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                              {order.userPhone || 'N/A'}
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                               {order.totalPrice ? order.totalPrice.toFixed(2) : '0.00'} MAD
